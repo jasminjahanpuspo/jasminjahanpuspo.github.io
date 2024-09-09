@@ -12,8 +12,24 @@
   <title>Jasmin Jahan Puspo - Home</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script type="text/javascript" src="js/hidebib.js"></script>
+
+  <script type="text/javascript">
+  var current=1; var total=3; var time;
+  function imageChanger() { 
+    time=setTimeout("changeImage()", 5000); 
+  }
+  function changeImage() { 
+    current++;
+    if(current > total) current=1;
+    document.getElementById("profile").src="images/prof_crop_circle"+current+".png";
+    imageChanger(); 
+  }
+
+</script>
+
+  
 </head>
-<body>
+<body onLoad="imageChanger();">
   <div class="section">
     <h1>Jasmin Jahan Puspo</h1>
   </div>
@@ -39,9 +55,13 @@
             hideblock('email');
           </script>
         </td>
-        <td width="400">
-          <img src="images/profile_picture.PNG" alt="My picture" height="250" align="right">
+      <!--  <td width="400">
+          <img src="images/profile_picture.png" alt="My picture" height="250" align="right">
         </td>
+  -->
+         <td style="padding:2.5%;width:40%;max-width:40%">
+              <img id="profile" style="width:100%;max-width:100%" alt="profile photo" src="images/prof_crop_circle1.png" class="hoverZoomLink">
+            </td>
       </tr>
     </table>
 
