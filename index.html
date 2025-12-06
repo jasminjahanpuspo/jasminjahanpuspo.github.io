@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Google Analytics Script -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60320583-2"></script>
     <script>
+      /* Initialize Google Analytics */
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -11,32 +13,44 @@
       gtag('config', 'UA-60320583-2');
     </script>
 
+    <!-- Page Title -->
     <title>Jasmin Jahan Puspo - Home</title>
+
+    <!-- Main CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Script for hiding email -->
     <script type="text/javascript" src="js/hidebib.js"></script>
 
+    <!-- Meta Tags -->
     <meta name="author" content="Jasmin Jahan Puspo">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
 
+    <!-- Image Slideshow Script -->
     <script type="text/javascript">
-      var current = 1;
-      var total = 2;
-      var time;
+      var current = 1;   // Current image index
+      var total = 2;     // Total images available
+      var time;          // Timer reference
 
+      // Start image changer
       function imageChanger() {
         time = setTimeout("changeImage()", 5000);
       }
 
+      // Change profile image periodically
       function changeImage() {
         current++;
         if (current > total) current = 1;
         document.getElementById("profile").src = "images/prof_crop_circle" + current + ".png";
-        imageChanger();
+        imageChanger(); // Recursively call to continue the loop
       }
     </script>
   </head>
 
+  <!-- Load image changer on page load -->
   <body onload="imageChanger();">
     <div class="section">
       <h1>Jasmin Jahan Puspo</h1>
@@ -44,10 +58,14 @@
 
     <hr>
 
+    <!-- Intro Section -->
     <div class="section">
       <table>
         <tr valign="top">
+          <!-- Left Column: Bio -->
           <td style="width: 600px; vertical-align: top;">
+
+            <!-- Academic Background -->
             I am an M.Sc(Thesis) student in Computer Science and Engineering (CSE) at Shahjalal University of Science and Technology (<a href="https://www.sust.edu/d/cse">SUST</a>).
             My advisor is <a href="https://www.sust.edu/departments/cse/faculty/rahmanms@sust.edu">Mohammad Shahidur Rahman</a>.
             I also received my B.Sc.(Engineering) in Computer Science and Engineering (CSE) from North East University Bangladesh
@@ -57,11 +75,13 @@
 
             <p><br></p>
 
+            <!-- Research Interests -->
             My research interest in Computer Vision lies in implementing machine learning algorithms in medical imaging.
             I am broadly interested in Computer Vision and Machine Learning.
 
             <p><br></p>
 
+            <!-- Social / Contact Links -->
             <p>
               <a href="javascript:toggleblock('email')">Email</a> |
               <a href="https://github.com/jasminjahanpuspo">GitHub</a> |
@@ -70,15 +90,17 @@
               <a href="Data/Jasmin_Graduate_CV.pdf">CV</a>
             </p>
 
+            <!-- Hidden Email Section -->
             <pre xml:space="preserve" id="email" style="font-size: 12px">
 jasminjahanpuspo AT {gmail.com}
             </pre>
 
             <script xml:space="preserve" language="JavaScript">
-              hideblock('email');
+              hideblock('email'); // Hide email initially
             </script>
           </td>
 
+          <!-- Right Column: Profile Image -->
           <td style="padding: 2.5%; width: 40%; max-width: 40%;">
             <img id="profile" style="width: 65%; max-width: 65%;" alt="profile photo"
               src="images/prof_crop_circle1.png" class="hoverZoomLink">
@@ -88,13 +110,16 @@ jasminjahanpuspo AT {gmail.com}
 
       <br>
 
+      <!-- ========================= -->
       <!-- News Section -->
+      <!-- ========================= -->
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tbody>
           <tr>
             <td>
               <h2>News</h2>
               <ul>
+                <li><b>[23 Oct 2025]</b> Accepted paper: WEICON Conference 2025.</li> 
                 <li><b>[23 Oct 2025]</b> Successfully defended master's thesis.</li>
                 <li><b>[21 Aug 2025]</b> Completed the <b>IELTS</b> Academic Test.</li>
                 <li><b>[13 Jun 2025]</b> A paper based on my master’s thesis accepted at <a href="https://qpain.org/">QPAIN 2025</a>.</li>
@@ -110,7 +135,9 @@ jasminjahanpuspo AT {gmail.com}
 
       <br>
 
-      <!-- Publications Section -->
+      <!-- ================================= -->
+      <!-- Publications Section Header -->
+      <!-- ================================= -->
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tbody>
           <tr>
@@ -119,7 +146,9 @@ jasminjahanpuspo AT {gmail.com}
         </tbody>
       </table>
 
+      <!-- =============== -->
       <!-- Journal Section -->
+      <!-- =============== -->
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tbody>
           <tr>
@@ -128,12 +157,16 @@ jasminjahanpuspo AT {gmail.com}
         </tbody>
       </table>
 
+      <!-- Journal Entry -->
       <table width="100%" align="center" border="0" cellpadding="20">
         <tbody>
           <tr>
+            <!-- Thumbnail Image -->
             <td style="padding: 20px; width: 25%; vertical-align: middle;">
               <img src="images/mosquito.PNG" alt="mosquito_diseases" width="130" height="100">
             </td>
+
+            <!-- Publication Details -->
             <td width="75%" valign="center">
               <b>TransembleNet: Enhancing vector mosquito species classification through transfer learning-based ensemble model.</b><br>
               Abdullah Al Maruf, Md. Mahmudul Haque, Rownuk Ara Rumy, <b>Jasmin Jahan Puspo</b>, Dr. Zeyar Aung.<br>
@@ -145,7 +178,9 @@ jasminjahanpuspo AT {gmail.com}
         </tbody>
       </table>
 
+      <!-- =================== -->
       <!-- Conference Section -->
+      <!-- =================== -->
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tbody>
           <tr>
@@ -154,8 +189,11 @@ jasminjahanpuspo AT {gmail.com}
         </tbody>
       </table>
 
+      <!-- Conference Entries -->
       <table width="100%" align="center" border="0" cellpadding="20">
         <tbody>
+
+          <!-- QPAIN Entry -->
           <tr>
             <td style="padding: 20px; width: 25%; vertical-align: middle;">
               <img src="images/qpain_2025.png" alt="bengali_taka" width="130" height="100">
@@ -169,6 +207,7 @@ jasminjahanpuspo AT {gmail.com}
             </td>
           </tr>
 
+          <!-- ECCE Entry -->
           <tr>
             <td style="padding: 20px; width: 25%; vertical-align: middle;">
               <img src="images/ecce_2025.jpg" alt="skin_cancer" width="130" height="100">
@@ -182,6 +221,7 @@ jasminjahanpuspo AT {gmail.com}
             </td>
           </tr>
 
+          <!-- ICCIT Entry -->
           <tr>
             <td style="padding: 20px; width: 25%; vertical-align: middle;">
               <img src="images/iccit_2024.png" alt="breast_cancer" width="130" height="100">
@@ -197,7 +237,9 @@ jasminjahanpuspo AT {gmail.com}
         </tbody>
       </table>
 
+      <!-- ====================== -->
       <!-- Academic Thesis Section -->
+      <!-- ====================== -->
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tbody>
           <tr>
@@ -206,12 +248,16 @@ jasminjahanpuspo AT {gmail.com}
         </tbody>
       </table>
 
+      <!-- Thesis Entry -->
       <table width="100%" align="center" border="0" cellpadding="20">
         <tbody>
           <tr>
+            <!-- Thesis Image -->
             <td style="padding: 20px; width: 25%; vertical-align: middle;">
               <img src="images/breast_cancer.png" alt="breast_cancer" width="130" height="100">
             </td>
+
+            <!-- Thesis Details -->
             <td width="75%" valign="center">
               <b>One Stage Detection, Segmentation, Shape, and Stage Classification in Digital Mammography.</b><br>
               <b>Jasmin Jahan Puspo</b>, Muhammad Mahir Hasan Chowdhury.<br>
@@ -222,7 +268,9 @@ jasminjahanpuspo AT {gmail.com}
         </tbody>
       </table>
 
-      <!-- Dataset Collection Section -->
+      <!-- ============================= -->
+      <!-- Personal Dataset Collection -->
+      <!-- ============================= -->
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tbody>
           <tr>
@@ -231,8 +279,11 @@ jasminjahanpuspo AT {gmail.com}
         </tbody>
       </table>
 
+      <!-- Datasets -->
       <table width="100%" align="center" border="0" cellpadding="20">
         <tbody>
+
+          <!-- Bengali Taka Dataset -->
           <tr>
             <td style="padding: 20px; width: 25%; vertical-align: middle;">
               <img src="images/bengali taka.png" alt="bengali taka" width="130" height="100">
@@ -245,6 +296,7 @@ jasminjahanpuspo AT {gmail.com}
             </td>
           </tr>
 
+          <!-- Bangla Sign Language Dataset -->
           <tr>
             <td style="padding: 20px; width: 25%; vertical-align: middle;">
               <img src="images/bangla_sign_language.png" alt="sign_language" width="130" height="100">
@@ -258,6 +310,7 @@ jasminjahanpuspo AT {gmail.com}
         </tbody>
       </table>
 
+      <!-- Template Credit -->
       <a href="https://jonbarron.info/">Template</a>
     </div>
   </body>
